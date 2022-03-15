@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>초 시간</title>
+    <script>
+        var cnt = 1;
+        var interval;
+        function start() {
+            interval = setInterval("paly()", 1000);
+            
+//            var txt = document.getElementById('box');
+//            txt.innerHTML=("<h3>" +cnt + "<h3>");
+        }
+        function paly(){
+            var txt = document.getElementById('box');
+            txt.innerHTML=("<h3>" +cnt + "<h3>");
+            cnt += 1;
+        }
+        function end(){
+            clearInterval(interval);
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+    </div>
+    <button onclick="start();">시작</button>
+    <button onclick="end();">종료</button>
+</body>
+</html>

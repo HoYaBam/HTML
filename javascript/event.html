@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #bt{
+            cursor: pointer; /*화살표*/
+            
+        }
+    </style>
+    <script>
+        /*var bt = document.getElementById('bt');
+        bt.onclick = function() {
+            console.log('ok');
+        };  오류가 생긴다. 왜? script 시작 번역시 body가 들어오지 않았기 때문에*/  
+        window.onload = function() {
+//            var bt = Document.getElementById('bt');
+            function view() {
+                console.log('ok');
+            }
+            function dbview() {
+                console.log('dobleclick');
+            }
+            bt.addEventListener('click', view);
+            bt.addEventListener('mouseover', dbview);
+        }
+    </script>
+
+</head>
+<body>
+    <button id='bt'>클릭</button>
+    
+<!--         var bt = document.getElementById('bt');-->
+<!--        bt.onclick = function() {-->
+<!--            console.log('ok');-->
+<!--        };  이거는 상관없다 실행순서가 bt후에 script가 나왔기 때문이다.*/-->
+
+
+    </body>
+</html>

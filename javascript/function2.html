@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function2</title>
+    <script>
+        function id_chk() {
+            var id = document.getElementById('id').value;
+            console.log(id);
+                if (id.length < 6 || id.length > 13){
+                    alert("아이디는 6자 이상 13자 이하입니다. 다시 입력해주세요.");
+                }else {
+                    alert("정상입니다.");
+                }
+            
+        
+        }
+        
+        
+    </script>
+    <style>
+        input{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>회원 가입</h1>
+    <form>
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" id="id"></td>
+                <td><button onclick="id_chk();">확인</button>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password"></td>
+                <td><button>확인</button>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

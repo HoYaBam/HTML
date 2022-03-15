@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            var login = document.login;
+            login.onsubmit = function() {
+                if(!login.id.value) {
+                    alert('아이디를 입력해주세요!');
+                    login.id.focus();
+                    return false;
+                }
+                if(!login.pw.value) {
+                    alert('비밀번호를 입력해주세요!');
+                    login.pw.focus();
+                    return false;
+                }
+                if(login.pw.value != login.pwcom.value){
+                    login.pw.value = "";
+                    login.pwcom.value = "";
+                    login.pw.focus();
+                    alert('비밀번호가 일치하지않습니다!');
+                    return false;
+                    
+                }
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="https://www.naver.com" method="post" name="login">
+        <div><lavel for='id'>아이디</lavel><input type='text' name='id' id='id'></div>
+        <div><lavel for='pw'>비밀번호</lavel><input type='password' name='pw' id='pw'></div>
+        <div><lavel for='pw'>비밀확인</lavel><input type='password' name='pwcom' id='pwcom'></div>
+        <div><input type='submit' value="확인">
+        <input type='reset' value="취소"></div>
+    </form>
+</body>
+</html>

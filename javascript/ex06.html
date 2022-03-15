@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        (function() {
+            var return_value = life();
+            alert(return_value);
+        })();
+        function life(){
+            console.log('즉시 실행 함수1');
+            return "익명함수 즉시 실행"; 
+        }
+        
+         ( function() {
+          life(); 
+        })();
+        
+        var instant = (function() {
+            console.log('즉시 실행 함수2');
+        })();
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

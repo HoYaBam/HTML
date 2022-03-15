@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String 객체</title>
+    <script>
+       /* var result;
+        var num1 = Number(prompt('숫자를 입력'));
+        var opr = prompt('연산자 입력');
+        var num2 = Number(prompt('숫자를 입력')); 
+        result = eval("num1 "+ opr.charAt(0) +" num2");
+        console.log(result);*/
+        
+        /*var no = prompt("주민번호 입력");
+        console.log(no.indexOf('-'));
+        console.log(no.substr(no.indexOf('-')+1, 1));
+        year = no.substr(0,2);
+        mouth = no.substr(2,2);
+        day = no.substr(4,2);
+        console.log(year+'년' + mouth+'월' + day +'일');
+        console.log(no.substring(0,7));*/
+        
+        /*var no = prompt("Code");
+        console.log(no.substr(-1)); */
+        
+        var str="1, 홍길동, 30, 대전 서구 둔산서로 17, 남자";
+        var person = str.split(', ');
+        for(var p in person){ //(var p; p < person.length; p++);
+            console.log(person[p]);
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

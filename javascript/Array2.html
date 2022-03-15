@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Araay </title>
+    <script>
+        var imgs = ['aduerk1.jpg', 'aduerk2.jpg', 'aduerk3.jpg'];
+        var count = 0;
+        var interval = setInterval(function() {
+            var path = "<img src =/HTML/images/" + imgs[count] + ">";
+            var re = document.getElementById("img");
+            re.innerHTML=path;
+            count++;
+            if(count >= imgs.length)
+                count = 0;
+        },2000);
+        
+    </script>
+</head>
+<body>
+    <div id="img" >
+        
+    </div>
+</body>
+</html>

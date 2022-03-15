@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>popup</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #popup {
+            width: 300px;
+            height: 500px;
+            position: relative;
+        }
+        
+        #img {
+            width: 300px;
+            height: 480px;
+        }
+        #img img {
+            width: 300px;
+            height: 470px;
+        }
+        #cls {
+            width: 300px;
+            height: 20px;
+            position: absolute;
+            left: 260px;
+            bottom: 3px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var cls = document.getElementById('cls');
+            cls.onclick = function() {
+                window.close();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="popup">
+        <div id="img">
+            <img src="images/aduerk1.jpg";>
+        </div>
+        <div id="cls">
+            <button>닫기</button>
+        </div>
+    </div>
+</body>
+</html>

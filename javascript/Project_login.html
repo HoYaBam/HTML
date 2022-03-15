@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
+    <script>
+        function login() {
+            var id = document.getElementById('id').value;
+            var pw = document.getElementById('pw').value;
+            
+            
+            if(id.length == 0 && pw.length == 0){
+                alert("아이디와 비밀번호를 입력해주세요.")
+            }
+            else if(pw.length == 0) {
+                if(id.length < 6 || id.length > 13)
+                    alert("아이디는 6자 이상 13자 이하입니다. 다시 입력해주세요.");
+                else
+                    alert("비밀번호를 입력해주세요");
+                }
+            
+            else if(id.length == 0){
+                if(pw.length < 6 || pw.length > 13) 
+                    alert("비밀번호는 6자 이상 13자 이하입니다. 다시 입력해주세요.");
+                else 
+                     alert("아이디를 입력해주세요");
+            }
+            else if(id.length < 6 && pw.length < 6){
+                alert("아이디와 비밀번호를 다시 입력해주세요.");
+            }
+            else if(id.length > 13 && pw.length > 13) {
+                alert("아이디와 비밀번호를 다시 입력해주세요.");
+            }
+            else if(id.length >= 6 && id.length <= 13){
+                if(pw.length < 6 || pw.length > 13)
+                    alert("비밀번호는 6자 이상 13자 이하입니다. 다시 입력해주세요.");
+                else
+                    alert("로그인 합니다.");
+            }
+            else{
+                if(id.length < 6 || id.length > 13)
+                    alert("아이디는 6자 이상 13자 이하입니다. 다시 입력해주세요.");
+                else
+                    alert("로그인 합니다.");
+            }    
+        }
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #swrp{
+            position: relative;
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        #top {
+            width: 100%;
+            height: 170px;
+        }
+
+        #logo {
+            position: relative;
+            top: 70px;
+            width: 45%;
+            height: 100px;
+            left: 300px;
+        }
+        #logo a{
+            text-decoration: none;
+            color: black;
+        }
+        #logo h1{
+            position: relative;
+            font-family: 'Island Moments', cursive;
+            left: 40px;
+            top: 15px;
+            font-size: 80px;
+
+        }
+
+        #main {
+            width: 100%;
+            height: 300px;
+        }
+
+        #login {
+            position: relative;
+            top: 20px;
+            left: 250px;
+            width: 60%;
+            height: 270px;
+/*            background-color: coral;*/
+            border: 1px solid #000;
+        }
+
+        #login input {
+            position: relative;
+            left: 80px;
+            top: 10px;
+            width: 450px;
+            height: 50px;
+            border-radius: 20px 20px 0px 0px;
+            border: 1px solid #000;
+            font-size: 20px;
+        }
+
+        button {
+            position: relative;
+            width: 450px;
+            height: 60px;
+            left: 80px;
+            top: 20px;
+            border-radius: 20px 20px 0px 0px;
+            font-size: 30px;
+        }
+        #login a{
+            position: relative;
+            top: 30px;
+            left: 80px;
+            margin: 20px;
+            text-decoration: none;
+            color: black;
+        }
+        #footer{
+            width: 700px;
+            position: relative;
+            left: 200px;
+            height: 300px;
+/*            background-color: aqua;*/
+            display: grid;
+            grid-template-columns: 34% 33% 33%;
+            grid-template-rows: 300px;
+        }
+        .cf1{
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        .cf2{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            
+        }
+        .cf3{
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+        #footer img{
+            width: 238px;
+            height: 300px;
+        }
+        #footer a{
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+   <div id="swrp">
+    <div id="top">
+        <div id="logo">
+            <a href="file:///C:/HTML/Project_1.html"><h1>WeTowArticle</h1></a>
+        </div>
+    </div>
+    <div id="main">
+        <div id="login">
+            <form>
+                <table>
+                    <tr>
+                        <td><input type="text" id="id" title="아이디" placeholder="아이디"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" id="pw" title="비밀번호" placeholder="비밀번호"></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="login();">로그인</button></td>
+                    </tr>
+                </table>
+            </form>
+            <a href="#">비밀번호 찾기　　|</a>
+            <a href="#">아이디 찾기　　|</a>
+            <a href="#">회원가입</a>
+        </div>
+    </div>
+    <div id="footer">
+            <div class="cf1"><a href="https://www.naver.com"><img src="images/aduerk3.jpg"></a></div>
+            <div class="cf2"><a href="https://www.daum.net"><img src="images/aduerk2.jpg"></a></div>
+            <div class="cf3"><a href="https://www.google.com"><img src="images/aduerk4.jpg"></a></div>
+    </div>
+    </div>
+</body>
+
+</html>

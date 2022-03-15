@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interval_Timeout</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 100px;
+            position: relative;
+        }
+    </style>
+
+    <script>
+        var posX = 0;
+        var posY = 0;
+        var interval;
+        window.onload = function() {
+            var start = document.getElementById('start');
+            var stop = document.getElementById('stop');
+            var box = document.getElementById('box');
+            start.onclick = function() {
+             
+                    
+                
+                interval = setInterval(function() {
+                    posX += 3;
+                    box.style.left = posX + "px";
+                    
+                    if(posX > 500) {
+                    interval = setInterval(function() {
+                    posX -= 1;
+                    box.style.right = posX + "px";
+                    
+                },100);}
+                },100);
+                
+                
+                
+                    
+                
+            }
+            stop.onclick = function() {
+                clearInterval(interval);
+            }
+            
+            
+        }
+    
+    </script>
+
+</head>
+<body>
+   <button id='start'>
+       출발
+   </button>
+   <button id='stop'>
+       정지
+   </button>
+    <div id='box'>
+        
+    </div>
+</body>
+</html>

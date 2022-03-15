@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atrribute</title>
+</head>
+<body>
+    <div id='popup' class='up'>
+        내용
+        <img src="images/aduerk1.jpg">
+    </div>
+    <button id="bt">변경</button>
+    <script>
+        var popup = document.getElementById('popup');
+        console.log(popup.getAttribute('class'));
+        //popup.removeChild(popup.firstChild);
+        var txt = popup.children[0].getAttribute('src');
+        console.log(txt);
+        
+        var bt = document.getElementById('bt');
+        bt.onclick = function() {
+            var r = Math.floor(Math.random() * 4) +1;
+            var path = 'images/aduerk' + r+ '.jpg'
+            popup.children[0].setAttribute('src',path);
+        }
+        
+    </script>
+</body>
+</html>

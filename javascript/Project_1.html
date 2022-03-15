@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project_1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #upAduerk{
+            width: 800px;
+            height: 20px;
+            margin: 0 auto;
+        }
+        #top{
+            width: 850px;
+            height: 100px;
+            margin: 0 auto;
+            
+        }
+        #logo{
+            float: left;
+            position: relative;
+            top: 10px;
+            left: 30px;
+            width: 150px;
+            height: 70px;
+        }
+        #logo img{
+            width: 150px;
+            height: 70px;
+        }
+        #title{
+            position: relative;
+            top: 10px;
+            left:  200px;            
+            width: 500px;
+            height: 70px;
+        }
+        #title h1{
+            position: relative;
+            right: 60px;
+            font-family: 'Island Moments', cursive;
+            font-size: 70px;
+        }
+        #login2{
+            position: relative;
+            bottom: 70px;
+            left: 200px;
+            float: right;
+            width: 200px;
+            height: 30px;
+        }
+        #login2 a{
+            margin: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        #topmenu{
+            margin: 0 auto;
+            width: 850px;
+            height: 50px;
+        }
+        #topmenu ul li{
+            display: inline;
+            
+        }
+        #topmenu ul li a{
+            color: black;
+            position: relative;
+            top: 10px;
+            font-size: 20px;
+            margin: 35px;
+            text-decoration: none;
+        }
+        #topmenu ul li a:hover{
+            color: rgb(255,0,200);
+            text-decoration:underline;
+        }
+        
+        hr{
+            box-shadow: 1px 1px 1px;
+        }
+        #maind{
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-color: aqua;
+        }
+        #Aduerk{
+            float: left;
+            top: 22px;
+            left: 200px;
+            position: relative;
+            width: 30%;
+            height: 400px;
+        }
+        #Aduerk img{
+            width: 100%;
+            height: 400px;
+        }
+        
+       
+
+    </style>
+    <script>
+        var imgs = ['aduerk1.jpg', 'aduerk2.jpg', 'aduerk3.jpg','aduerk4.jpg'];
+        var count = 0;
+        var interval = setInterval(function() {
+        var path = "<img src =../HTML/images/" + imgs[count] + ">";
+        var re = document.getElementById("Aduerk");
+            re.innerHTML=path;
+            count++;
+            if(count >= imgs.length)
+                count = 0;
+        },2000);
+    </script>
+</head>
+<body>
+  <div id="upAduerk">
+      
+  </div>
+   <div id="top">
+    <div id="logo">
+<!--            <img src="images/logo.jpg">-->
+    </div>
+    <div id="title">
+        <h1>WeTowArticle</h1>
+    </div>
+    <div id="login2">
+        <a href="file:///C:/HTML/Project_login.html">로그인</a>
+        <a href="#">회원가입</a>
+    </div>
+    </div>
+    <hr>
+    <div id="topmenu">
+           <ul>
+            <li><a href="#">카테고리</a></li>
+            <li><a href="#">베스트 상품</a></li>
+            <li><a href="#">마이쇼핑</a></li>
+            <li><a href="#">장바구니</a></li>
+            <li><a href="#">고객센터</a></li>
+            </ul>
+    </div>
+    <hr>
+    <div id="maind">
+    <div id="Aduerk">
+        <img id="topA1">
+    </div>
+    
+      
+    </div>
+</body>
+</html>

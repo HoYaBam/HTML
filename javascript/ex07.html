@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>지역변수, 전역변수</title>
+    <script>
+        var num;
+        function func1() {
+            var num1;
+            num1 = 10;
+            alert("func1 : " + (num1 + num));
+        }
+        function func2() {
+            var num2;
+            num2 = 100;
+            alert("func2 : " + (num2 + num));
+            
+        }
+        function rept() {
+            var count = 0;
+            for(var j= 0; j < 10; j++ ){
+                count = 10;
+                console.log(count);
+                count++;
+            }
+            console.log(j);
+        }
+        
+
+        num = 1000;
+//        alert("main : " + num);
+//        func1();
+//        func2();
+        rept();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

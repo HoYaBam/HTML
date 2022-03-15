@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #loc{
+            color: blue;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var loc = document.getElementById('loc');
+            loc.onclick = function() {
+                location.href='https://www.naver.com';
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <p id='loc'>어디로 갈까?</p>
+</body>
+</html>

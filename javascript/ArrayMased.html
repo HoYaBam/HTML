@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var city = ['서울', '대구', '대전', '부산'];
+        for(var i in city) {
+            console.log(i);
+        }
+        for(var i of city) {
+            console.log(i);
+        }
+        for(var c = 0; c< city.length; c++) {
+            console.log(city[c]);
+        }
+        
+        var num = [1,2,3];
+        var sum = 0;
+        num.forEach(function(value, index, array) {
+            console.log(value);
+            console.log(index);
+            console.log(array);
+            sum += value;
+            
+        });
+        console.log(sum);
+        
+        city.forEach(function(value){
+           console.log("forEach : " + value); 
+        });
+        
+        city.map(function(value, index, array) {
+            console.log(value);
+            console.log(index);
+            console.log(array);
+        });
+        
+        var data = ['javascript', 20, 30, 'jQuery'];
+        data.filter(function(value, index, array) {
+            console.log(value);
+            console.log(index);
+            console.log(array);
+        });
+        
+        var num = data.filter(function(value) {
+           if(typeof value === 'number')
+            console.log(value);
+        });
+        
+        console.log(num.toString());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
