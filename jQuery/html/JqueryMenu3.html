@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>가로 매뉴</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/style1.css">
+    <script>
+        $(function () {
+            $('#navi .sub').hide();
+            $('#navi>li').hover(function() {
+                $('#navi .sub').show();
+                
+            },function(){
+                 $('#navi .sub').hide();
+                
+            });//hover끝
+        });
+    </script>
+  
+</head>
+<body>
+    <div id='menuArea'>
+        <ul id='navi'>
+            <li id='menu1'>
+                <a href="#">Navigation 01</a>
+                <ul class='sub'>
+                    <li><a href="#">Submenu01</a></li>
+                    <li><a href="#">Submenu02</a></li>
+                    <li><a href="#">Submenu03</a></li>
+                </ul>
+            </li>
+            <li id='menu2'>
+                <a href="#">Navigation 02</a>
+                <ul class='sub'>
+                    <li><a href="#">Submenu01</a></li>
+                    <li><a href="#">Submenu02</a></li>
+                    <li><a href="#">Submenu03</a></li>
+                    <li><a href="#">Submenu04</a></li>
+                </ul>
+            </li>
+            <li id='menu3'>
+                <a href="#">Navigation 03</a>
+                <ul class='sub'>
+                    <li><a href="#">Submenu01</a></li>
+                    <li><a href="#">Submenu02</a></li>
+                </ul>
+            </li>
+            <li id='menu4'>
+                <a href="#">Navigation 04</a>
+                <ul class='sub'>
+                    <li><a href="#">Submenu01</a></li>
+                    <li><a href="#">Submenu02</a></li>
+                    <li><a href="#">Submenu03</a></li>
+                    <li><a href="#">Submenu04</a></li>
+                    <li><a href="#">Submenu05</a></li>
+                </ul>
+            </li>
+            <li id='menu5'>
+                <a href="#">Navigation 05</a>
+                <ul class='sub'>
+                    <li><a href="#">Submenu01</a></li>
+                    <li><a href="#">Submenu02</a></li>
+                    <li><a href="#">Submenu03</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function() {
+           var boxWidth = $('#box').css('width');
+            var w = $('#box').width();
+            var c = ['red', 'blue', 'orange'];
+            console.log(boxWidth);
+            console.log(w);
+            
+            var interval = setInterval(function (){
+                w += 1;
+                $('#box').css({width: w + 'px', background: function() {
+                    var r = Math.floor(Math.random() * 3);
+                    //$('#box').css("background", c[r]);
+                    return c[r];
+                }});
+                if(w >= 883) {
+                clearInterval(interval);
+            }
+            }, 10);
+            // $('object').css('속성', '속성 값);
+            // $('object').css({속성: '속성 값',속성: '속성 값' });
+            
+            
+            
+            
+        });
+    </script>
+    <style>
+        #box{
+            width: 300px;
+            height: 300px;
+            background-color: #ccc;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id='box'></div>
+</body>
+</html>

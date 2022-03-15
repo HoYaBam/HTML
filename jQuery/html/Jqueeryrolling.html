@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <style>
+        .banner {
+            position: relative;
+            width: 340px;
+            height: 210px;
+            top: 50px;
+            margin: 0 auto;
+            padding: 0;
+/*            overflow: hidden;*/
+        }
+        .banner ul {
+            position: absolute;
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+        .banner ul li{
+            float: left;
+            width: 340px;
+            height: 210px;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            var $banner = $(".banner").find("ul");
+            var $bannerWidth = $banner.children().outerWidth();
+            var $bannerHeight = $banner.children().outerHeight();
+            var $length = $banner.children().length;
+            var rollingId;
+            
+            rollingId = setInterval(function() {
+                rollingStart();
+            }, 3000);
+            function rollingStart() {
+                $banner.css("width", ($bannerWidth * $length) + "px");
+                $banner.css("height", $bannerHeight + "px");
+                $banner.animate({left: -$bannerWidth + "px"}, 1500, function() {
+                    $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
+                    $(this).find("li:first").remove();
+                    $(this).css("left", 0);
+                });
+                
+            }
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="contents">
+        <h3>
+            롤링 배너 만들기
+        </h3>
+        <div class="banner">
+            <ul>
+                <li><img src="../images/aduerk1.jpg"></li>
+                <li><img src="../images/aduerk2.jpg"></li>
+                <li><img src="../images/aduerk3.jpg"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

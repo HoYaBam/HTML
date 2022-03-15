@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InsertionMethod 삽입메서드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function() {
+           $('#prepend').click(function() {
+               $('#box').prepend($('#box').find('img:last'));               
+               
+           }); //prepend 버튼
+        
+        $('#append').click(function() {
+            $('#box').append($('#box img:first'));
+        });
+            
+            });
+    </script>
+    <style>
+        #box {
+            width: 850px;
+            height: 290px;
+            
+            
+        }
+        #box div{
+            float: left;
+        }
+        
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        #btn {
+            width: 800px;
+            height: 40px;
+            clear: both;
+            text-align: center;   
+        }
+        #btn button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id='box'>
+        <div id='b1'><img src="../images/dog.jpg"></div>
+        <div id='b2'><img src="../images/dog,cat.jpg"></div>
+        <div id='b3'><img src="../images/dog1.jpg"></div>
+        <div id='b4'><img src="../images/dog2.jpg"></div>
+    </div>
+    <div id='btn'>
+        <button id='prepend'>prepend</button>
+        <button id='append'>append</button>
+    </div>    
+</body>
+</html>

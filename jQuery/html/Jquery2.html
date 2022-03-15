@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        li {
+            margin:  5px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+//            $('.list1 > li[class="list_1"]').css('border', '2px solid red');
+            $(".list1 > li[class='list_1']").css({
+                border: '1px solid red', fontWeight: 'bold'
+            });
+            $('ul li:eq(4)').css({
+                background: 'blue',
+            });
+            
+            $('.list1 > li[class="list_2"]').css('border', '2px solid blue');
+            $(".list1 > li[class='list_3']").css('border', '2px solid green');
+            $(".list2 > li[class='list-bg']").css('background', 'red');
+//            $(".list2 > li[class='list_1']").css('background', 'blue');
+            $(".list2 > li[class='list_2']").css('background', 'green');
+            $(".list3 > li[class='list']").css('border', '2px solid red');
+            $(".list3 > li[class='list-1']").css('border', '3px solid blue');
+            $(".list3 > li[class='list-bg']").css('border', '4px solid green');
+            $(".list4 > li[class='list']").css('border', '5px solid red');
+            $(".list4 > li[class='list-1']").css('background', 'blue');
+            $(".list4 > li[class='list-bg']").css('border', '9px solid green');
+        });
+    </script>
+</head>
+<body>
+    <ul class="list1">
+        <li class="list_1">내용 1_1</li>
+        <li class="list_2">내용 1_2</li>
+        <li class="list_3">내용 1_3</li>
+    </ul>
+    <ul class="list2">
+        <li class="list-bg">내용 1_1</li>
+        <li class="list_1">내용 1_2</li>
+        <li class="list_2">내용 1_3</li>
+    </ul>
+    <ul class="list3">
+        <li class="list">내용 3_1</li>
+        <li class="list-1">내용 3_2</li>
+        <li class="list-bg">내용 3_3</li>
+    </ul>
+    <ul class="list4">
+        <li class="list">내용 4_1</li>
+        <li class="list-1">내용 4_2</li>
+        <li class="list-bg">내용 4_3</li>
+    </ul>
+</body>
+</html>

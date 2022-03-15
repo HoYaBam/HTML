@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            var xPos = 0;
+            var flag = false;
+            var interval;
+            interval = setInterval(move(), 100);
+
+            function move() {
+                
+                if(xPos == -500) {
+                    flag = false;
+                    
+                }else if(xPos == 0){
+                    flag = true;
+                }
+                
+                console.log(xPos);
+                
+                if(flag){
+                    xPos += -5;
+                }else {
+                    xPos += 5;
+                }
+                
+                $('#imgs').css({left: xPos +'px'});   
+                            
+            }
+            
+            
+            
+            
+            $('#imgs').hover(function() {
+                clearInterval(interval);
+                
+                
+            },function() {
+                var interval = setInterval(move(), 100);
+            });
+            
+            
+        });//첫 function 끝
+    
+    </script>
+    
+    <style>
+        *{padding: 0;margin: 0;}
+        
+        #view {
+            
+            position: relative;
+            left: 100px;
+            top: 100px;
+            width: 500px;
+            height: 80px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            
+        }
+        #imgs{
+            position: absolute;
+            left: 0;
+            top: 4px;
+            list-style: none;
+            width: 1000px;
+            text-align: center;
+            
+            
+        }
+        #imgs li{
+            float: left;
+            width: 100px;
+            height: 72px;
+            border-right: 1px solid #ccc;
+            padding: 0px 5px;
+            box-sizing: border-box;
+            
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+   
+    <div id="view">
+        <ul id="imgs">
+            <li><a href="#">
+                <img src="../images/team1.jpg">
+            </a></li>
+            <li><a href="#">
+                <img src="../images/team2.jpg">
+            </a></li>
+            <li><a href="#">
+                <img src="../images/team3.jpg">
+            </a></li>
+            <li><a href="#">
+                <img src="../images/team4.jpg">
+            </a></li>
+            <li><a href="#">
+                <img src="../images/team5.jpg">
+            </a></li>
+            <li><a href="#">
+                <img src="../images/team6.jpg">
+            </a></li>
+            <li><a href="#">
+                <img src="../images/team7.jpg">
+            </a></li>
+            <li><a href="#">
+                <img src="../images/team8.jpg">
+            </a></li>
+            <li><a href="#">
+                <img src="../images/team9.jpg">
+            </a></li>
+            <li><a href="#">
+                <img src="../images/team10.jpg">
+            </a></li>
+        </ul>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: 1000px;
+        }
+
+        #title {
+            width: 800px;
+            height: 50px;
+            position: relative;
+            left: 100px;
+            top: 100px;
+            background-color: #eee;
+            
+        }
+
+        .titleText {
+            width: 90px;
+            height: 20px;
+/*            background-color: red;*/
+            position: absolute;
+            color: black;
+            text-decoration: none;
+            top: 10px;
+            float: left;
+            left: 20px;
+            font-weight: bolder;
+
+        }
+
+        #nText {
+            text-align: center;
+            margin-bottom: 2px;
+            width: 40%;
+            height: 25px;
+            position: absolute;
+            left: 120px;
+            top: 10px;
+            float: left;
+            list-style: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #nText li {
+            width: 310px;
+            
+            position: relative;
+/*            overflow: hidden;*/
+            
+        }
+        
+
+        #nText li a{
+            width: 10px;
+            height: 20px;
+            color: black;
+            text-decoration: none;
+            white-space:nowrap;
+            
+        }
+        #nText li a:hover{
+            font-weight:bold;
+            text-decoration:underline;
+        }
+
+        .text1,
+        .text2,
+        .text3,
+        .text4,
+        .text5 {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title">
+        <a href="#" class="titleText">연합뉴스 > </a>
+        <ul id='nText'>
+
+            <li>
+                <a href="#" class="text1">이제 오미크론이 우세종"문재인 대통령은 20일 “우리나라도 이제 오미크론 변이가 우세종이 되는 게 기정 사실화되었다”고 밝혔다. 문 대통령은 “정부는 그동안 준비해 온 오미크론 대응체제로 신속히 전환</a>
+            </li>
+            <li>
+                <a href="#" class="text2">[헤럴드경제=김용훈 기자] 국내 코로나19 백신 접종자를 조사한 결과, 3차 백신 접종시 2차 백신 접종자보다 오미크론 변이 방어 능력이 최대 29배까지 높아지는 것으로 나타났다.</a>
+            </li>
+            <li>
+                <a href="#" class="text3">[헤럴드경제=배두헌 기자] 이재명 더불어민주당 대선후보와 윤석열 국민의힘 대선후보가 '초접전' 양상에 접어들었다는 여론조사 결과가 20일 나왔다.</a>
+            </li>
+            <li>
+                <a href="#" class="text4">19일(현지시간) BBC, 가디언 등 외신은 체코의 여성 포크송 가수 하나 호르카(Hana Horka)가 코로나19 관련 합병증으로 57세의 나이로 사망했다고 보도했다.</a>
+            </li>
+            <li>
+                <a href="#" class="text5">프리지아 소속사 효원 CNC는 19일 "지적 재산권에 대해 무지한 소속 크리에이터가 올바른 개념을 가질 수 있게 잡아주는 것 또한 회사의 몫"이라며 "모든 비난은 경영자가 받는 것이 마땅하다"고 입장을 밝혔다.</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <script>
+        var count = 0;
+        var interval = setInterval(function() {
+             
+            
+            $('#nText li').animate({bottom: '+=21px'}, 1000, function(){
+                $('.text'+count).css({ bottom: '-=21px'});
+               
+            });
+             count++;
+            
+            if (count == 6) {
+                count = 1;
+            }
+            console.log(count);
+            
+
+
+
+        }, 3000);
+    </script>
+</body></html>

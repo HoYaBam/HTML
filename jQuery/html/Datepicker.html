@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    
+    <style>
+        input {
+            border: 1px solid #bbb;
+            height: 24px;
+            margin-right: 5px;
+        }
+        img{
+            width: 35px;
+            height: 35px;
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        $(function() {
+            $(".datepicker").datepicker({
+                showOn: "button",
+                buttonImage: "../images/calendar_icon.png",
+                buttonImageOnly: true,
+                buttonText:"달력",
+                changeYear: true,
+                changeMonth: true,
+                dateFormat: "yy-mm-dd",
+                nextImage:"../images/calendar_icon.png",
+            });
+            $.datepicker.setDefaults({
+                monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                showMonthAfterYear: true,
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <div>기간설정
+    <input type="text" class="datepicker"> ~ <input type="text" class="datepicker"></div>   
+</body>
+</html>
