@@ -1,0 +1,12 @@
+.table{
+    text-align: center;
+}
+
+.table button{
+    margin-right: 3px;
+}
+#sch{
+    position: relative;
+    left: 450px;
+    margin-bottom: 20px
+}

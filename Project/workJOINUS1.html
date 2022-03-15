@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        function id_chk() {
+            var id
+            var id = document.getElementById('idd').value;
+            console.log(id);
+            if (id.length < 6 || id.length > 13) {
+                alert("아이디는 6자이상 13자 까지 입니다. 다시 입력 하세요");
+            } else {
+                alert("정상적인 아이디 입니다.")
+            }
+        }
+    </script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*
+        #total11{
+            width: 1500px;
+            height: 1500px;
+            margin: 0 auto;
+            background: #3954;
+            
+            
+        }
+*/
+
+
+        #total {
+            width: 1500px;
+            height: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            border: 
+            /*            position: relative;*/
+            /*            border-top: 1px solid black;*/
+/*            border-bottom: 1px solid black;*/
+            /*            margin-top: 150px;*/
+
+        }
+
+
+
+
+        #tttop {
+            width: 1500px;
+            height: 150px;
+/*            background: #3954;*/
+            border-bottom: 1px solid black;
+            position: relative;
+/*            */
+            
+
+        }
+
+        #logo {
+            width: 20%;
+            height: 100px;
+            /*            border: 1px solid black;*/
+            margin-left: 100px;
+            
+            position: absolute;
+            top: -30px;
+            left: 70px;
+            margin-top: 40px;
+/*            background: #fcfc;*/
+        }
+        #logo img{
+            width: 150px;
+        }
+         #login {
+            width: 85%;
+            height: 100%;
+
+            padding-top: 30px;
+            position: absolute;
+            top: 0;
+            left: 440px;
+            text-align: center;
+            
+            /*
+            text-decoration: none;
+            list-style: none;
+*/
+
+
+        }
+
+        #login >ul >li  {
+            list-style: none;
+            float: left;
+            width: 50px;
+            height: 250px;
+            
+/*            line-height: 150px;*/
+            
+            
+
+        }
+
+        #login .hight{
+            float: left;
+            width: 200px;
+            height: 60px;
+/*            margin-left: 50px;*/
+            margin-top: 60px;
+            line-height: 30px;
+            list-style: none;
+            
+            
+        }
+        #login .hight a{
+            width:250px;
+        }
+        #login li a {
+            color: black;
+            text-decoration: none;
+            font-size: 24px;
+            width: 50px;
+            
+
+        }
+
+        
+        #topmain{
+            width: 1500px;
+            height: 820px;
+            position: relative;
+            top:300px;
+/*            background: #fcfc;*/
+            border-bottom: 1px solid black;
+            
+        }
+        #topp {
+            width: 100%;
+            height: 60px;
+            /*            background: #abab;*/
+            font-size: 18px;
+            margin-top: 80px;
+            margin-bottom: 70px;
+            border-bottom: 1px solid black;
+
+                        position: absolute;
+            top: -200px;
+
+        }
+
+        #topp li {
+            /*
+            width: 100%;
+            height: 60px;
+*/
+            /*            background: #fcd;*/
+            list-style: none;
+            float: left;
+            margin-left: ;
+            font-size: 18px;
+            margin-left: 320px;
+
+            /*            position: absolute;*/
+        }
+
+        #section {
+            width: 100%;
+            height: 60px;
+            /*            background: #fcd;*/
+            font-size: 18px;
+            margin-left: 670px;
+
+
+
+            /*            position: absolute;*/
+        }
+
+        #section1 {
+            width: 100%;
+            height: 60px;
+            /*            background: #fff;*/
+            font-size: 18px;
+            margin-left: 450px;
+
+
+            /*            position: absolute;*/
+        }
+
+        #logid {
+            width: 100%;
+            height: 60px;
+            /*            background: #abab;*/
+            font-size: 18px;
+            margin-left: 450px;
+
+        }
+
+        #logpw {
+            width: 100%;
+            height: 60px;
+            /*            background: #fcd;*/
+            font-size: 18px;
+            margin-left: 450px;
+
+        }
+
+
+        #logpw1 {
+            width: 100%;
+            height: 60px;
+            /*            background: #abab;*/
+            font-size: 18px;
+            margin-left: 450px;
+        }
+
+
+        #name {
+            width: 100%;
+            height: 60px;
+            /*            background: #fcd;*/
+            font-size: 18px;
+            margin-left: 450px;
+
+        }
+
+        #birth {
+            width: 100%;
+            height: 60px;
+            /*            background: #abab;*/
+            font-size: 18px;
+            margin-left: 450px;
+        }
+
+        #addres {
+            width: 100%;
+            height: 60px;
+            /*            background: #fcd;*/
+            font-size: 18px;
+            margin-left: 450px;
+
+        }
+
+        #addres1 {
+            width: 100%;
+            height: 60px;
+            /*            background: #abab;*/
+            font-size: 18px;
+            margin-left: 450px;
+        }
+
+        #phone {
+            width: 100%;
+            height: 60px;
+            /*            background: #fcd;*/
+            font-size: 18px;
+            margin-left: 450px;
+
+        }
+
+        #email {
+            width: 100%;
+            height: 60px;
+            /*            background: #abab;*/
+            font-size: 19px;
+            margin-left: 450px;
+        }
+
+        #jjoin {
+            width: 100%;
+            height: 60px;
+            /*            background: #fcd;*/
+            margin-top: 40px;
+            font-size: 19px;
+            margin-left: 700px;
+
+
+        }
+
+        .btn-group {
+            width: 200px;
+            height: 50px;
+
+        }
+
+        .loglog1 {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 520px;
+        }
+
+        .loglog2 {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 500px;
+        }
+
+        .loglog3 {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 500px;
+        }
+
+        .loglog4 {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 540px;
+        }
+
+        .loglog5 {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 510px;
+        }
+
+        .loglog6 {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 550px;
+        }
+
+        .loglog7 {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 520px;
+        }
+
+        .loglog8 {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 235px;
+        }
+
+        .loglog {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 228px;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <div id="total">
+        <div id="tttop">
+            <div id="logo">
+                <a href="workMAIN.html"><img src="images/logo2.png";></a>
+            </div>
+
+           
+           <div id="login">
+            <ul>
+                <li class="hight"><a href="#">notice</a></li>
+                <li class="hight"><a href="Login.html">login</a></li>
+                <li class="hight"><a href="#">introduction</a></li>
+                <li class="hight"><a href="#">
+                        <div class="dropdown">
+                            <a class="btn btn-secondary-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                curriculum
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        
+                    </a>
+                    </li>
+
+            </ul>
+
+
+
+        </div>
+<div id="topmain">
+        <div id="topp">
+            <ul>
+                <li>
+                    Terms
+                </li>
+                <li>
+                    Enter information
+                </li>
+                <li>
+                    Join
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div id="section">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Personal</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Corporation</label>
+            </div>
+
+        </div>
+        <div id="section1">
+            Basic Information
+        </div>
+
+
+
+
+        <div id="logid">
+            <tr>
+                <td>ID</td>
+                <td><input class="loglog1" type="text"></td>
+                <td><button id="id" onclick="id_chk();">Duplication</button></td>
+            </tr>
+        </div>
+
+
+
+        <div id="logpw">
+            <tr>
+                <td>PW</td>
+                <td><input class="loglog2" type="text"></td>
+                <td id="pasw1"><button>Confirm</button></td>
+            </tr>
+        </div>
+
+
+
+        <div id="logpw1">
+            <tr>
+                <td>PW</td>
+                <td><input class="loglog3" type="text"></td>
+                <td><button>Confirm</button></td>
+            </tr>
+        </div>
+
+
+
+        <div id="name">
+            Name* <input class="loglog4" type="text">
+        </div>
+
+
+
+        <div id="birth">
+            Birthday* <input class="loglog5" type="text">
+        </div>
+
+
+
+        <div id="addres">
+            Address* <input class="loglog6" type="text">
+        </div>
+
+
+
+        <div id="addres1">
+            Detail <input class="loglog7" type="text">
+        </div>
+
+
+
+        <div id="phone">
+            HP* 010 <input class="loglog8" type="text">
+            <span class="a">-</span>
+            <input class="loglog8" type="text">
+        </div>
+
+
+        <div id="email">
+            <div class="mb-3">
+                Email address
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <input class="loglog" type="text">
+                        <span class="a">@</span>
+                        <input class="loglog" type="text">
+                        <select name="mailslc">
+                            <option value="self" selected>Input</option>
+                            <option value="naver">naver.com</option>
+                            <option value="gm">gmail.com</option>
+                            <option value="da">daum.com</option>
+                            <option value="yah">yahoo.com</option>
+                        </select>
+
+                    </td>
+                </tr>
+
+            </div>
+
+
+        </div>
+        <div id="jjoin">
+            <div class="btn-group">
+
+                <a href="Login.html" class="btn btn-dark">Join us</a>
+            </div>
+        </div>
+        </div>
+     </div>
+
+
+
+
+    </div>
+
+</body></html>

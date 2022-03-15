@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>학생 커뮤니티</title>
+    <script src="../../jQuery/js/jquery-3.6.0.js"></script>
+<!--    <link rel="stylesheet" href="./css/community.css">-->
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        #top {
+            width: 1450px;
+            height: 2000px;
+            position: relative;
+        }
+
+        #logo {
+            width: 10%;
+            height: 100%;
+            /*            border: 1px solid black;*/
+            left: 20px;
+            position: absolute;
+            top: 10px
+        }
+
+        #logo img{
+            width: 150px;
+        }
+
+
+        .next {
+            width: 30px;
+            height: 30px;
+        }
+
+        #position h2 {
+            font-size: 30px;
+            position: relative;
+            left: 600px;
+            top: 200px;
+        }
+
+        .article {
+            position: relative;
+            top: 200px;
+        }
+
+        #login {
+            width: 79.8%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 300px;
+        }
+
+        #login li {
+            list-style: none;
+            float: right;
+            width: 15%;
+            height: 60px;
+            line-height: 150px;
+            font
+        }
+
+        #login li a {
+            color: black;
+            text-decoration: none;
+            font-size: 24px;
+            width: 200px;
+        }
+
+        table {
+            top: 200px;
+            right: 270px;
+            position: relative;
+            width: 500px;
+        }
+
+        caption {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .board_list_wrap {
+            padding: 50px;
+            position: relative;
+            bottom: 300px
+        }
+
+        .board_list {
+            width: 60%;
+            border-top: 2px solid black;
+        }
+
+        .board_list tr {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .board_list th,
+        .board_list td {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .board_list td {
+            text-align: center;
+        }
+
+        .board_list .tit {
+            text-align: left;
+        }
+
+        .board_list .tit:hover {
+            text-decoration: underline;
+        }
+
+        .board_list_wrap .page {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0;
+            position: relative;
+            top: 200px;
+            right: 250px;
+            width: 60%;
+        }
+
+        .board_list_wrap .page a {
+            display: inline-block;
+            margin-left: 10px;
+            padding: 5px 10px;
+            border-radius: 100px;
+            font-size: 12px;
+        }
+
+        .board_list_wrap .page a:first-child {
+            margin-left: 0;
+        }
+
+        .board_list_wrap .page a.bt {
+            border: 1px solid #eee;
+            background: #eee;
+        }
+
+        .board_list_wrap .page a.num {
+            border: 1px solid black;
+            font-weight: 600;
+            color: green;
+        }
+
+        .board_list_wrap h2 {
+            position: relative;
+            top: 180px;
+            right: 45px;
+        }
+
+        .board_list_wrap .page a.num.on {
+            background: black;
+            color: #fff;
+        }
+
+        #next {
+            margin-right: -4px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            position: relative;
+            top: 180px;
+        }
+
+        #pre {
+            margin-left: -3px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            top: 180px;
+            position: relative;
+            left: 1200px;
+        }
+
+        #btn_group button {
+            border: 1px solid black;
+            background-color: rgba(0, 0, 0, 0);
+            color: black;
+            padding: 5px;
+        }
+
+        #btn_group button:hover {
+            color: white;
+            background-color: black;
+        }
+
+        .board_list h2 {
+            position: relative;
+
+        }
+
+        #notice {
+            width: 1250px;
+            height: 100px;
+            position: relative;
+            top: 15px;
+            border: 1px solid black;
+        }
+
+        .article2 a {
+            position: relative;
+            bottom: 55px;
+        }
+
+
+
+/*        자유게시판*/
+        .board_list_wrap2 {
+            padding: 50px;
+            left: 15px;
+            position: relative;
+            bottom: 290px;
+            
+        }
+
+        .board_list2 {
+            width: 654px;
+            border-top: 2px solid black;
+        }
+
+        .board_list2 tr {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .board_list2 th,
+        .board_list2 td {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .board_list2 td {
+            text-align: center;
+        }
+
+        .board_list2 .tit2 {
+            text-align: left;
+        }
+
+        .board_list2 .tit2:hover {
+            text-decoration: underline;
+        }
+
+        .board_list_wrap2 .page2 {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0;
+            position: relative;
+            top: 200px;
+            right: 250px;
+            width: 60%;
+        }
+
+        .board_list_wrap2 .page2 a {
+            display: inline-block;
+            margin-left: 10px;
+            padding: 5px 10px;
+            border-radius: 100px;
+            font-size: 12px;
+        }
+
+        .board_list_wrap2 .page2 a:first-child {
+            margin-left: 0;
+        }
+
+        .board_list_wrap2 .page2 a.bt {
+            border: 1px solid #eee;
+            background: #eee;
+        }
+
+        .board_list_wrap2 .page2 a.num {
+            border: 1px solid black;
+            font-weight: 600;
+            color: green;
+        }
+
+        .board_list_wrap2 h2 {
+            position: relative;
+            top: 180px;
+            right: 45px;
+        }
+
+        .board_list_wrap2 .page a.num.on {
+            background: black;
+            color: #fff;
+        }
+
+        .calendar {
+            width: 300px;
+            position: relative;
+            top: 250px;
+            left: 300px;
+        }
+
+        #quick {
+            position: relative;
+            top: 600px;
+            left: 1300px;
+        }
+
+        #emotion2{
+    position: relative;
+    width: 100px;
+    left: -360px;
+    bottom: 13px;
+    z-index: 111;
+}
+    </style>
+</head>
+
+<body>
+      <div id="top">
+        <div id="quick">
+            <div class="qMenu"><strong><a href="#wrap">동영상 시청하기</a></strong></div>
+            <div class="qMenu"><strong><a href="#board_list4">공지사항 및 캘린더</a></strong></div>
+            <div class="qMenu"><strong><a href="#board_list5">자유게시판</a></strong></div>
+                </div>
+        <div id="logo">
+            <a href="workSTUDENT.html"><img src="images/logo2.png"></a>
+        </div>
+        
+        <div id = "emotion2">
+        <a href="dsbd.html"><i class="fas fa-h-square fa-3x "></i></a>
+       </div>
+       
+        <div id="login">
+            <ul>
+                <li><a href="#">curriculum</a></li>
+                <li><a href="#">notice</a></li>
+                <li><a href="workMAIN.html">logout</a></li>
+                <li><a href="#">introduction</a></li>
+                <li><a href=dsbd.html>my class</a></li>
+            </ul>
+        </div>
+
+        <div id="position">
+            <h2 >1주차</h2>
+        </div>
+         <div id="btn_group">
+             <button id="next">◀</button>
+             <button id="pre">▶</button>
+         </div>
+        <div id="wrap">
+            <div class="article">
+                <iframe width="1250" height="600" src="https://www.youtube.com/embed/fvVFeRBO1qI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="article2">
+                    <h2>강의 계획서</h2>
+                <div id= "notice"></div>
+                <a>1주차) 미적분의 역사를 배워가며 미적분에 대하여 차근차근 알아갑니다.</a><br>
+                <a>과제를 통하여 문제풀이도 함께 하시길 바랍니다.</a>
+                </div>
+            </div>
+        </div>
+        <div class=calendar>
+            <img src="images/1111.png" width="500px;" >
+        </div>
+        <div class="board_list_wrap">
+            <table class="board_list">
+                <h2 id="board_list4">공지사항</h2>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>글쓴이</th>
+                        <th>작성일</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td class="tit"><a href="#">오늘 과제 안내입니다.</a></td>
+                        <td>이교수</td>
+                        <td>2022.01.26</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="tit"><a href="#">정답 파일 올려드립니다.</a></td>
+                        <td>이교수</td>
+                        <td>2022.01.20</td>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="tit"><a href="#">문제 파일 올려드립니다.</a></td>
+                        <td>이교수</td>
+                        <td>2022.01.17</td>
+                        <td>560</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="page">
+                <a href="#" class="bt">첫 페이지</a>
+                <a href="#" class="bt">이전 페이지</a>
+                <a href="#" class="num on">1</a>
+                <a href="#" class="num">2</a>
+                <a href="#" class="num">3</a>
+                <a href="#" class="bt">다음 페이지</a>
+                <a href="#" class="bt">마지막 페이지</a>
+            </div>
+        </div>
+        
+         <div class="board_list_wrap2">
+            <table class="board_list2">
+                <h2 id="board_list5">자유게시판</h2>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>글쓴이</th>
+                        <th>작성일</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>5</td>
+                        <td class="tit2"><a href="#">책 30쪽 질문드립니다. (1)</a></td>
+                        <td>이학생</td>
+                        <td>2022.01.22</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="tit2"><a href="#">책 중고로 파실 분 계신가요...? ㅠ.ㅠ (3)</a></td>
+                        <td>김학생</td>
+                        <td>2022.01.17</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="tit2"><a href="#">오늘 이해 안가는 부분이 있습니다. (1) </a></td>
+                        <td>조학생</td>
+                        <td>2022.01.11</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="tit2"><a href="#">수강 취소하고 싶은데 가능한가요? (1) </a></td>
+                        <td>유학생</td>
+                        <td>2022.01.08</td>
+                        <td>60</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="tit2"><a href="#">오늘도 수업 잘들었습니다. ^^ (2) </a></td>
+                        <td>윤학생</td>
+                        <td>2022.01.04</td>
+                        <td>40</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="page2">
+                <a href="#" class="bt">첫 페이지</a>
+                <a href="#" class="bt">이전 페이지</a>
+                <a href="#" class="num on">1</a>
+                <a href="#" class="num">2</a>
+                <a href="#" class="num">3</a>
+                <a href="#" class="bt">다음 페이지</a>
+                <a href="#" class="bt">마지막 페이지</a>
+            </div>
+                    <div class="qwe" style="width: 900px; margin-top: -130px; margin-left: 700px;">
+            <img src="images/sss.PNG">
+            <img src="images/xxx.PNG">
+            <img src="images/ccc.PNG">
+        </div>
+        </div>
+    </div>
+   
+
+</body></html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        #content {
+            /*            width: 900px;*/
+            /*            height: 000px;*/
+            position: relative;
+            top: 0;
+        }
+
+        #content4 li {
+            margin: 20px;
+            list-style: none;
+
+        }
+
+        #content4 li a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .dropdown {
+            left: 10px;
+            margin-bottom: 70px;
+        }
+
+        .article {
+            margin-bottom: 50px;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div id="content">
+        <div id="content1">
+            <div class="article">
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        정보처리기사
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">산업 기사</a></li>
+                        <li><a class="dropdown-item" href="#">전기 기사</a></li>
+                        <li><a class="dropdown-item" href="#">소방 기사</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="article">
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        재응시 여부
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">응시</a></li>
+                        <li><a class="dropdown-item" href="#">미응시</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="article">시험기간<div id="week">
+
+                    <form name="시험기간" action="값을 보낼 주소" method="post">
+                        <input type='date'> ~ <input type='date' />
+                    </form>
+                </div>
+            </div>
+
+            <div class="article">응시시간<div id="week">
+                    <form name="해당 폼의 이름" action="값을 보낼 주소" method="post">
+                        <input type='date' name='week' /> ~ <input type='date' name='week' />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="content2">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Ariana</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Grande</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Banana</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Apple</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Oops</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Peter</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</body></html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+   <link href="signin.css" rel="stylesheet">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        #total{
+            width: 1500px;
+            height: 700px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+
+        #toptotal {
+            width: 100%;
+            height: 150px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #logo {
+            width: 20%;
+            height: 100%;
+            left: 300px;
+            position: absolute;
+            top: 20px;
+        }
+        #logo img{
+            width: 150px;
+        }
+        
+        #maintop {
+            width: 800px;
+            height: 120px;
+            position: relative;
+            margin: 0 auto;
+            left: 200px;
+
+        }
+        #maintop > ul {
+            position: absolute;
+            top: 62px;
+            
+        }
+
+        #maintop li {
+            list-style: none;
+            float: right;
+            margin-left: 80px;
+        }
+
+        #maintop li a {
+            color: black;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .dropdown {
+            position: relative;
+            top: -7px;
+            right: 14px;
+        }
+
+        form{
+            
+            position: relative;
+            left: 640px;
+            font-size: 30px;
+            
+        }
+        input{
+            margin-bottom: 10px;
+            border: 1px solid #fff;
+            border-bottom: 1px solid #000;
+        }
+        .pw{
+            font-size: 19.5px;
+        }
+        .logbtn{
+            left: 150px;
+            position: relative;
+            
+        }
+      
+        
+ 
+
+
+
+      
+    </style>
+</head>
+<body>
+    <div id="total">
+        <div id="toptotal">
+            <div id="logo">
+                <a href="workMAIN.html"><img src="images/logo2.png"></a>
+            </div>
+            <div id="maintop">
+
+                <ul>
+                    <li class="log" ><a href="#">
+                           
+                            <div class="dropdown">
+                               
+                                <a class="btn btn-secondary-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    curriculum
+                                </a>
+                                
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </a></li>
+                    <li><a href="#">notice</a></li>
+                    <li><a href="#">login</a></li>
+                    <li><a href="#">introduction</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <hr>
+        
+        <form name="frmLogin" method="post" action="cklogin" enctype="utf-8">
+           ID<input type="text" name="user_id"><br>
+           
+           <span class="pw">PW</span><input type="password" name="user_pw"> <br>
+            <input class="logbtn" type="submit" value="로그인">
+            
+        </form>
+     
+
+       <hr>
+        
+        
+        </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+#top31{
+    position: relative;
+    left: 500px;
+    margin-bottom: 20px
+}
+#top31 input{
+    width: 130px;
+}
+.table{
+    text-align: center;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>학생 대시보드</title>
+    <script src="../../jQuery/js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="./css/class.css">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link rel = "stylesheet" href="css/eotlqhem.css">
+<style>
+
+</style>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="logo">
+            <a href="workSTUDENT.html"><img src="images/logo2.png"></a>
+        </div>
+        <div id="login">
+            <ul>
+                <li><a href="#">curriculum</a></li>
+                <li><a href="#">notice</a></li>
+                <li><a href="workMAIN.html">logout</a></li>
+                <li><a href="#">introduction</a></li>
+                <li><a href=StudentWork.html>attendance</a></li>
+            </ul>
+        </div>
+        <div id="picture">
+            <img src="images/CARD1.png" width="350px">
+        </div>
+        <div id="search">
+            <input type="text" placeholder="Search...">
+            <div id="emotion">
+                <i class="fas fa-search fa-lg"></i>
+            </div>
+        </div>
+        <div id="activity" style="margin-top: -150px;">
+            <h2>Recent activities</h2>
+            <div id="list" >
+                <p><a href="#"> 　　 　　 　　 　　 　　 　　 　　'집에가조' 목요일에 과제 완료하기</a></p> <br>
+                <p><a href="#">  　　 　　  　 　　　　 　　 　　 　　 정보처리기사 필기 공부하기</a></p> <br>
+                <p><a href="#">  　　 　　 　　 　　  　 　　CSS HTML JAVA 정보처리기사 산업기사 공부하기</a></p> <br>
+                <p><a href="#">  　　 　　 　　 　　  　　  　 　　★ 국민취업지원제도 신청하세요 ★</a></p>
+            </div>
+        </div>
+
+        <div id="week">
+            <input type="radio" name="se">MON
+            <input type="radio" name="se">TUE
+            <input type="radio" name="se">WED
+            <input type="radio" name="se">THU
+            <input type="radio" name="se">FRI
+        </div>
+
+        <div id="list2">
+            <h2>Classroom list</h2>
+            <table class="table2">              
+                <thead>
+                    <tr>
+                        <th width="40">강의시간</th>
+                        <th width="600">강의명</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>10:00</td>
+                        <td><a href="ho.html">미디어커뮤니케이션</a></td>
+
+                    </tr>
+                    <tr>
+                        <td>12:00</td>
+                        <td><a href="#">행정학개론</a></td>
+
+                    </tr>
+                    <tr>
+                        <td>14:00</td>
+                        <td><a href="#">심리학의 이해</a></td>
+
+                    </tr>
+                </tbody>              
+            </table>    
+        </div>
+           <div id="total" style="margin-top: 200px;">
+                    <p>
+                       <a class="btn btn-secondary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">학습신청현황</a>
+                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">지난학습사항</button>
+                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">닫기</button>
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <div class="card card-body">
+                                    신청한 학습 목록이 없습니다.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                <div class="card card-body">
+                                    지난 학습 목록이 없습니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    
+</body></html>
